@@ -11,7 +11,7 @@ int main(){
     
     //For init(pky file not found)
     //Create Config as you like
-    //eg: CreateConfigByStr(const char* pky)CreateConfigByRandom(); 
+    //eg: CreateConfigByStr(const char* pky) CreateConfigByRandom(); 
     
     //Be sure that the return value is true
     ReadConfig();
