@@ -33,3 +33,22 @@ int main(){
 
 ```
 ## How to build
+### Build envrionment
+- Compiler: `msvc-v143` in `Visual Studio 2022`
+- Platform: `Windows 10/11 (Windows SDK 10.0)`
+
+### Build Debug
+#### Compile
+- Include Directory: `PATH_TO_YOUR_PROJECT/Debug/include;$(IncludePath)`
+- Library Directory: `PATH_TO_YOUR_PROJECT/Debug/lib;$(LibraryPath)`
+#### Link
+- Additional Library: `PATH_TO_YOUR_PROJECT/Debug/lib;%(AdditionalLibraryDirectories)`
+- Additional Dependencies: `libMetaTradeNode_d.lib;leveldb_debug.lib;cpprest141_2_10d.lib;%(AdditionalDependencies)`
+
+### Build Release
+#### Compile
+- Include Directory: `PATH_TO_YOUR_PROJECT/Release/include;$(IncludePath)`
+- Library Directory: `PATH_TO_YOUR_PROJECT/Release/lib;$(LibraryPath)`
+#### Link
+- Additional Library: `PATH_TO_YOUR_PROJECT/Release/lib;%(AdditionalLibraryDirectories)`
+- Additional Dependencies: `leveldb.lib;libMetaTradeNode.lib;cpprest141_2_10.lib;%(AdditionalDependencies)`
