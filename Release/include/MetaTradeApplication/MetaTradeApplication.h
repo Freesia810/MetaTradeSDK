@@ -34,6 +34,12 @@ public:
 	void Init(bool enableMining = true);
 
 	/// <summary>
+	/// 获取节点地址，需要在调用Init后使用
+	/// </summary>
+	/// <returns>节点地址</returns>
+	const char* Address();
+
+	/// <summary>
 	/// 重新启动Node服务，即同步区块Sync消息
 	/// </summary>
 	void ReloadNode();
@@ -67,6 +73,14 @@ public:
 	/// <param name='bills'>Output - 查询结果</param>
 	/// <param name='sz'>Output - 查询结果条数</param>
 	void QueryBills(const char* address, metatradenode::Bill** bills, uint64_t* sz);
+
+	/// <summary>
+	/// 查询当前在途账单，仅供参考，不代表最终上链账单
+	/// </summary>
+	/// <param name='address'>指定钱包地址</param>
+	/// <param name='bills'>Output - 查询结果</param>
+	/// <param name='sz'>Output - 查询结果条数</param>
+	void QueryTransitBills(const char* address, metatradenode::Bill** bills, uint64_t* sz);
 
 	/// <summary>
 	/// 查询所有商店信息

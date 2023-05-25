@@ -4,7 +4,7 @@
 /// <summary>
 /// 物品属性信息
 /// </summary>
-struct ItemInfo{
+struct __declspec(dllexport) ItemInfo{
 
     /// <summary>
     /// 该物品的id，现阶段均为数字，Coin默认为0
@@ -30,7 +30,7 @@ struct ItemInfo{
 /// <summary>
 /// 商店属性信息
 /// </summary>
-struct StoreInfo{
+struct __declspec(dllexport) StoreInfo{
 
     /// <summary>
     /// 商店地址
