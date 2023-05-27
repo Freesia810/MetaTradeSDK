@@ -43,7 +43,7 @@ int main(){
 - Library Directory: `PATH_TO_YOUR_PROJECT/Debug/lib;$(LibraryPath)`
 #### Link
 - Additional Library: `PATH_TO_YOUR_PROJECT/Debug/lib;%(AdditionalLibraryDirectories)`
-- Additional Dependencies: `libMetaTrade_d.lib;libMetaTradeNode_d.lib;leveldb_debug.lib;cpprest141_2_10d.lib;%(AdditionalDependencies)`
+- Additional Dependencies: `libcrypto.lib;libssl.lib;libMetaTrade_d.lib;libMetaTradeNode_d.lib;leveldb_debug.lib;cpprest141_2_10d.lib;%(AdditionalDependencies)`
 
 ### Build Release
 #### Compile
@@ -51,4 +51,4 @@ int main(){
 - Library Directory: `PATH_TO_YOUR_PROJECT/Release/lib;$(LibraryPath)`
 #### Link
 - Additional Library: `PATH_TO_YOUR_PROJECT/Release/lib;%(AdditionalLibraryDirectories)`
-- Additional Dependencies: `libMetaTrade.lib;leveldb.lib;libMetaTradeNode.lib;cpprest141_2_10.lib;%(AdditionalDependencies)`
+- Additional Dependencies: `libcrypto.lib;libssl.lib;libMetaTrade.lib;leveldb.lib;libMetaTradeNode.lib;cpprest141_2_10.lib;%(AdditionalDependencies)`
