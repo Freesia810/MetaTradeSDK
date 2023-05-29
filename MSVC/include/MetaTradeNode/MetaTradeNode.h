@@ -18,6 +18,8 @@ namespace metatradenode {
 		char pubkey[67];
 		char address[35];
 		bool mining;
+		bool force;
+		metatradenode::MiningPublisher* publisher;
 	};
 
 	class META_NODE_PUBLIC MetaTradeNode {
@@ -26,6 +28,7 @@ namespace metatradenode {
 		metatradenode::MetaTradeClient* _client{ nullptr };
 		metatradenode::BlockchainService* _bc_service{ nullptr };
 		metatradenode::LocalService* _lc_service{ nullptr };
+		void ClearLocalTemp();
 	public:
 		MetaTradeNode(metatradenode::nodeconfig& config) : _config(config) {};
 
