@@ -5,6 +5,15 @@ Shared library in MetaTrade
 ```c++
 #include <MetaTradeApplication/MetaTradeApplication.h>
 
+class TestPublisher : public metatradenode::MiningPublisher {
+	void PublishStart(int proveLevel) {
+		std::cout << proveLevel << std::endl;
+	};
+	void PublishFinished(int your_proof) {
+		std::cout << your_proof << std::endl;
+	};
+};
+
 int main() {
     MetaTradeApplication application;
 
@@ -22,8 +31,10 @@ int main() {
         return 0;
     }
 
-    //false -- cancel mining service
-    application.Init(false);
+    //false -- disable clear cache
+    //true -- enable mining
+    //your publisher -- mining info(if nullptr, disable publish)
+    application.Init(false, true, new TestPublisher());
 
     //true -- run sync
     //false -- run async
